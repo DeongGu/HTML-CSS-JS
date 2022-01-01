@@ -14,6 +14,43 @@
   document.querySelector('body').style.backgroundColor = 'white';
   document.querySelector('body').style.color='black';
   ">
+  <input id="night_day" type="button" value="night" onclick="
+  if(document.querySelector('#night_day').value==='night') {
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    document.querySelector('#night_day').value='day';
+  } else {
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+        document.querySelector('#night_day').value='night';
+  }
+  ">
+  <input type="button" value="night" onclick="
+  var target = document.querySelector('body');
+  if(this.value==='night') {
+    target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value='day';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length) {
+     alist[i].style.color = 'powderblue';
+     i = i + 1;
+   }
+  } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value='night';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length) {
+    alist[i].style.color = 'blue';
+     i = i + 1
+}
+  }
+  ">
   <ol>
     <li><a href="1.html">배드민턴</a></li>
     <li><a href="2.html">테니스</a></li>
@@ -24,5 +61,6 @@
   <p><h3>개요</h3> 야구(野球, Baseball)는 9명씩으로 이루어진 두 팀이 9회씩 공격과 수비를 번갈아 하며 승패를 겨루는 구기 경기이다.<br>
     공격하는 쪽은 상대편 투수가 던진 공을 방망이(bat)로 치고 1, 2, 3루를 돌아 홈으로 돌아오면 1점을 얻는다. 점수를 많이 얻는 팀이 이긴다.
   </p>
+
 </body>
 </html>
