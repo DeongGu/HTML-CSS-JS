@@ -3,12 +3,16 @@ function Person(name, first, second, third){
     this.first=first;
     this.second=second;
     this.third=third;
-    this.sum=function(){
-        return this.first+this.second+this.third;
-    }
+}
+
+Person.prototype.sum=function(){
+    return 'prototype : '+(this.first+this.second+this.third);
 }
 
 var kim = new Person('kim', 10, 20, 30);
+kim.sum = function(){
+    return 'this : '+(this.first+this.second);
+}
 var lee = new Person('lee', 10, 10, 10);
     
 console.log("kim.sum()", kim.sum());
