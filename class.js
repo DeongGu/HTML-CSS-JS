@@ -6,16 +6,23 @@ class Person{
         this.third = third;
     }
     sum(){
-        return 'prototype : '+(this.first+this.second+this.third);
+        return this.first+this.second+this.third;
     }
 }
 
+class PersonPlus extends Person {
+    constructor(name, first, second, third, fourth){
+        super(name, first, second, third);
+        this.fourth = fourth;
+    }
+    sum(){
+        return super.sum() + this.fourth;
+    }
+    avg(){
+        return (this.first+this.second+this.third+this.fourth)/4;
+    }
+}
+var kim = new PersonPlus('kim', 10, 20, 30, 40);
 
-var kim = new Person('kim', 10, 20, 30);
-kim.sum = function(){
-     return 'this : '+(this.first+this.second);
- }
-var lee = new Person('lee', 10, 10, 10);
-    
 console.log("kim.sum()", kim.sum());
-console.log("lee.sum()", lee.sum());
+console.log("kim.avg()", kim.avg());
