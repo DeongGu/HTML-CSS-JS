@@ -1,0 +1,28 @@
+ul {
+    list-style-type: none;
+    position: relative;
+    margin: 50px;
+    text-align: center;
+}
+li {
+    margin: 20px;
+}
+
+input[type="text"] {
+    width:110px;
+    padding:5px 10px;			
+    margin:0 5px 0 10px;
+}
+
+button {
+    padding:5px 10px;
+    border:1px solid #ccc;			
+    font-size:1em;
+}
+
+#showResult {
+    text-align: center;
+    margin-top:20px;
+	font-size:1.5em;
+}
+
