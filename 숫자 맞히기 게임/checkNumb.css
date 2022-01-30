@@ -1,0 +1,32 @@
+#contents {
+  margin: auto;
+  width: 50%;
+  border: 3px solid rgb(71, 99, 223);
+  padding: 10px;
+}
+
+#result {
+    margin: 10%;
+    font-size: 30px;
+    border: 10px solid blue;
+    text-align: center;
+    padding: 10%
+}
+
+#startBtn {
+    display: block;
+    padding: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#clickCount {
+    text-align: center;
+    font-weight: bold;
+}
