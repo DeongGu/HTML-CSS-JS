@@ -12,19 +12,19 @@ function refresh() {
         
     }
     else if(quizNumber > answerNumber) {
-        document.querySelector('#result').innerHTML="UP";
+        document.querySelector('#result').innerHTML="UP!";
         count++;
         document.querySelector('#clickCount').innerHTML=count+"회";
         
     } 
     else if(quizNumber < answerNumber) {
-        document.querySelector('#result').innerHTML="DOWN";
+        document.querySelector('#result').innerHTML="DOWN!";
         count++;
         document.querySelector('#clickCount').innerHTML=count+"회";
         
     }
     else {
-        document.querySelector('#result').innerHTML="맞혔습니다.";
+        document.querySelector('#result').innerHTML="맞혔습니다!!";
         count++
         document.querySelector('#clickCount').innerHTML=count+"회";
     }
