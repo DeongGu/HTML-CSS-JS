@@ -10,7 +10,10 @@
 <body>
     <h1>숫자 맞히기 게임</h1>
     <div id="contents">
-     <button onclick="refresh()" id="startBtn">시작</button>
+        <form>
+            <button onclick="refresh()" id="startBtn">시작</button>
+            <button onclick="window.location.reload()" id="resetBtn">다시</button>
+        </form>
      <div id="result"><br></div>
      시도 횟수 : <span id="clickCount"></span>
     </div>
