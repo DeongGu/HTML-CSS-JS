@@ -1,0 +1,9 @@
+div.contents {
+    text-align: center;
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+    padding: 10px;
+}
