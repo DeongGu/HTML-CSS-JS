@@ -3,7 +3,12 @@ div.contents {
     padding: 10px;
 }
 
-li {
+/* li {
     list-style: none;
     padding: 10px;
+} */
+
+caption {
+    display: block;
+    text-align: left;
 }
