@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온도 변환기</title>
+    <link rel="stylesheet" href="converter.css">
+</head>
+<body>
+    <div class="container">
+        <h1>섭씨 &xhArr; 화씨 온도 변환기</h1>
+        <div> 
+            <div>   
+                <input type="text" id="#s-value" onkeyup="converter()">
+                <span id="s-unit">&#8451;</span>
+            </div>    
+            <span id="exchange" onclick="exUnit()">&xhArr;</span>
+            <div>    
+                <input type="text" id="t-value">
+                <span id="t-unit">&#8457;</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="converter.js"></script>
+</html>
