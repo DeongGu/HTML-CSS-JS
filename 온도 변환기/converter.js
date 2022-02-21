@@ -1,34 +1,31 @@
-var sUnit = document.querySelector('#s-unit');
-var tUnit = document.querySelector('#t-unit');
 var cToF = true;
+var bN = document.querySelector("#bV");
+var aN = document.querySelector("#aV");
+var bUn = document.querySelector("#bU");
+var aUn = document.querySelector("#aU");
 
-var source = document.querySelector('#s-value');
-var target = document.querySelector('#t-value');
+function exch() {
 
-
-function exUnit() {
-    source.value = "";
-    target.value = "";
+    bN.value = "";
+    aN.value = "";
 
     if(cToF) {
         cToF = false;
-        sUnit.innerHTML = "&#8457";
-        tUnit.innerHTML = "&#8451";
+        bUn.innerHTML = "&#8457;"
+        aUn.innerHTML = "&#8451;"
     }
     else {
         cToF = true;
-        sUnit.innerHTML = "&#8451";
-        tUnit.innerHTML = "&#8457";
+        bUn.innerHTML = "&#8451;"
+        aUn.innerHTML = "&#8457;"
     }
 }
 
-function converter() {
-	
-	if(cToF) {
-		target.value = source.value * 1.8 + 32;
-	}
-
-	else {
-		target.value = (source.value - 32) / 1.8;
-	}
+function result() {
+   if(cToF) {
+    aN.value = (bN.value * 1.8 + 32).toFixed(2);
+   } 
+   else {
+    aN.value = ((bN.value -32) * 0.55).toFixed(2);   
+   } 
 }
