@@ -1,7 +1,7 @@
 const fs = require('fs');
 const input = fs.readFeSync('/dev/stdin').toString().trim();
 
-solution(A);
+solution(input);
 
 function solution(N) {
     let one = 0;
