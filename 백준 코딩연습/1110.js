@@ -1,29 +1,30 @@
-// const fs = require('fs');
-// let input = fs.readFileSync('/dev/stdin').toString();
+const fs = require('fs');
+const input = fs.readFeSync('/dev/stdin').toString().trim();
 
-const input = "0";
+solution(A);
 
-solution(+input);
-function solution(N){
-    let cycle = 0;
-    let result;
-    let ten = 0;
+function solution(N) {
     let one = 0;
-    if(N < 10){
-        ten = 0;
-        one = N;
-    }else{
-        ten = +N[0];
-        one = +N[1];
+    let ten = 0;
+    let result = N;
+    let sum = 0;
+    let count = 0;
+    while(N !== result || count === 0) {
+        if(+result<10){
+            ten = 0;
+            one = +result;
+        } else {
+            a = result.split("");
+            one = +a[1];
+            ten = +a[0];
+        }
+        sum = ten+one;
+        if(one === 0){
+            result = String(sum%10);    
+        } else {
+            result = String(one)+String(sum%10);
+        }
+        count++
+        }
+        console.log(count);
     }
-    
-    while(N !== result){
-        
-        let result1 = String(ten+one).padStart(2,"0");
-        result = String(one) + result1[1];
-        ten = +result[0];
-        one = +result[1];
-        cycle++;
-    }
-    console.log(cycle);
-}
