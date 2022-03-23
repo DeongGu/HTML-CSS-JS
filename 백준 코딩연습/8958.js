@@ -1,16 +1,34 @@
 const fs = require('fs');
-const input = fs.readFileSync('test.txt').toString().trim().split('\n');
-let a = [];
-let b = [];
-for(let i = 1; i < input.length; i++){
-    a[i-1] = input[i];
-}
+const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 
-for(let i =0;i<a.length;i++){
-   b[i] = a[i].split('X');
-}
+const arrayLength = +input[0];
+const items = input.slice(1);
 
-let filtered = b.filter(function(value){
-    return value !== '';
-})
-console.log(filtered);
+solution(arrayLength, items);
+
+function solution(arrayLength, items) {
+    for(let i = 0; i < arrayLength; i++){
+        const testCase = items[i];
+        let count = 0;
+        let sum = 0;
+        for(let j = 0; j < testCase.length; j++){
+            const Ostr = testCase[j];
+            if(Ostr === "O"){
+                count++
+                sum += count;
+            } else {
+                count = 0;
+            }
+        }
+        console.log(sum);
+    }
+}
+// let n = +input[0];
+
+// for(let i = 1; i < n+1; i++){
+//     let testCase = input[i].split('X');
+//     let sum = 0;
+//         for(let j = 0; j < testCase.length; j++){
+//             sum += (testCase[j].length)*(testCase[j].length+1)/2;
+//         }
+//     console.log(sum);}
