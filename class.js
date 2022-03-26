@@ -1,28 +1,47 @@
-class Person{
-    constructor(name, first, second, third){
-        this.name = name;
-        this.first = first;
-        this.second = second;
-        this.third = third;
+// class Person{
+//     constructor(name, first, second, third){
+//         this.name = name;
+//         this.first = first;
+//         this.second = second;
+//         this.third = third;
+//     }
+//     sum(){
+//         return this.first+this.second+this.third;
+//     }
+// }
+
+// class PersonPlus extends Person {
+//     constructor(name, first, second, third, fourth){
+//         super(name, first, second, third);
+//         this.fourth = fourth;
+//     }
+//     sum(){
+//         return super.sum() + this.fourth;
+//     }
+//     avg(){
+//         return (this.first+this.second+this.third+this.fourth)/4;
+//     }
+// }
+// var kim = new PersonPlus('kim', 10, 20, 30, 40);
+
+// console.log("kim.sum()", kim.sum());
+// console.log("kim.avg()", kim.avg());
+
+class PersonInformation{
+    constructor(IQ, hobby, favoriteColor, weight, height, e_mail, score, penalty){
+        this.IQ = IQ;
+        this.hobby = hobby;
+        this.favoriteColor = favoriteColor;
+        this.weight = weight;
+        this.height = height;
+        this.e_mail = e_mail;
+        this.score = score;
+        this.penalty = penalty;
     }
-    sum(){
-        return this.first+this.second+this.third;
+    testresult(){
+        return this.score - this.penalty;
     }
 }
-
-class PersonPlus extends Person {
-    constructor(name, first, second, third, fourth){
-        super(name, first, second, third);
-        this.fourth = fourth;
-    }
-    sum(){
-        return super.sum() + this.fourth;
-    }
-    avg(){
-        return (this.first+this.second+this.third+this.fourth)/4;
-    }
-}
-var kim = new PersonPlus('kim', 10, 20, 30, 40);
-
-console.log("kim.sum()", kim.sum());
-console.log("kim.avg()", kim.avg());
+const devil = new PersonInformation(300,'trouble','red','none','none','devil@hell.devil',80,0);
+console.log(devil);
+console.log('devil.testresult : ', devil.testresult());
