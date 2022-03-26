@@ -44,7 +44,7 @@ const god = {
 }
 
 //생성자함수 생성
-function personInformation(IQ, hobby, favoriteColor, weight, height, e_mail, score, penalty){
+function PersonInformation(IQ, hobby, favoriteColor, weight, height, e_mail, score, penalty){
     this.IQ = IQ,
     this.hobby = hobby,
     this.favoriteColor = favoriteColor,
@@ -58,6 +58,6 @@ function personInformation(IQ, hobby, favoriteColor, weight, height, e_mail, sco
     }
 }
 //인스턴스 생성
-const devil = new personInformation(300,'trouble','red','none','none','devil@hell.devil',80,0);
+const devil = new PersonInformation(300,'trouble','red','none','none','devil@hell.devil',80,0);
 console.log(devil);
 console.log(devil.testresult());
