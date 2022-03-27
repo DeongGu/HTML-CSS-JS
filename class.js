@@ -42,6 +42,16 @@ class PersonInformation{
         return this.score - this.penalty;
     }
 }
-const devil = new PersonInformation(300,'trouble','red','none','none','devil@hell.devil',80,0);
+
+class PersonInformationPlus extends PersonInformation{
+    constructor(IQ, hobby, favoriteColor, weight, height, e_mail, score, penalty, plusScore){
+    super(IQ, hobby, favoriteColor, weight, height, e_mail, score, penalty);
+    this.plusScore = plusScore;
+    }
+    testresult() {return super.testresult() + this.plusScore }
+    e_mailId() {return this.e_mail.split('@')[0]}
+}
+const devil = new PersonInformationPlus(300,'trouble','red','none','none','devil@hell.devil',80,0,5);
 console.log(devil);
 console.log('devil.testresult : ', devil.testresult());
+console.log(devil.e_mailId());
