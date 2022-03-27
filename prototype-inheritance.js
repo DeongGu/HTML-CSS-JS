@@ -34,3 +34,33 @@ lee.avg = function(){
 
 console.log('lee.sum() : ', lee.sum());
 console.log('lee.avg() : ', lee.avg());
+
+
+//객체 생성
+const jyo = {
+    IQ: 120,
+    score: 90,
+    penalty: 10,
+    plusScore: 3,
+    testResult: function(){
+        return this.score - this.penalty + this.plusScore;
+    }
+}
+
+const jung = {
+    IQ: 130,
+    score: 95,
+    penalty: 8,
+    plusScore: 5,
+}
+
+//상속 (__proto__, Object.create())
+jung.__proto__ = jyo;
+const Ann = Object.create(jyo);
+Ann.IQ = 140;
+Ann.score = 100;
+Ann.penalty = 5;
+Ann.plusScore = 10;
+
+console.log(jung.testResult());
+console.log(Ann.testResult());
