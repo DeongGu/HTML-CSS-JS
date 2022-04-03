@@ -1,17 +1,29 @@
 const fs = require('fs');
 const input = fs.readFileSync('test.txt').toString().trim().split('\n');
-const T = +input[0];
-const testCase =[];
 
-//[2,1,3,2,3]
-for(let i = 1; i < input.length; i+=2){
-    testCase.push(input.slice(i,i+2));
-}
+const T = Number(input.shift());
 
-console.log(testCase);
+// for(let i = 1; i < input.length; i+=2){
+//     testCase.push(input.slice(i,i+2));
+// }
 
-//1,3 0층 3호까지 합  1+2+3=6             1 1 1
-//2,3 1층 3호까지 합 1+3+6=10             2 3 4
-//3,3 2층 3호까지 합 1+4+9=14             3 5 7
-
-//4,5 3층 5호까지 합 1+5+12+16=34
+for (let i = 0; i < T; i++) {
+    const k = +input.shift();
+    const n = +input.shift();
+  
+    // 각 방당 인원수를 저장할 2차원 배열 선언
+    const house = Array.from(Array(k + 1), () => Array(n + 1).fill(0));
+    // 0층 (0층의 i호에는 i명이 산다.)
+    for (let i = 1; i <= n; i++) {
+      house[0][i] = i;
+    }
+    // 1 ~ k층 (k층 n호에는 k-1층 n호 + k층 n-1호만큼 산다.)
+    for (let i = 1; i <= k; i++) {
+      for (let j = 1; j <= n; j++) {
+        house[i][j] = house[i - 1][j] + house[i][j-1];
+      }
+    }
+  
+    // k층 n호의 인원수 출력
+    console.log(house[k][n]);
+  }
