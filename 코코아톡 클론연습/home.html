@@ -8,13 +8,16 @@
     <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="img/icon.jpg">
     <link href="styles.css" rel="stylesheet">
     <style>
+        :root {
+            --main-color: rosybrown;
+        }
         html {
             border: 5px solid black;
             background-color: red;
         }
         h1 {
             font-size: 50px;
-            color: rosybrown;
+            color: var(--main-color);
             font-style: italic;
         }
         body {
@@ -25,8 +28,8 @@
         }
         div {
             /* display: inline; don't have height, width */
-            height: 300px;
-            width: 300px;
+            height: 100px;
+            width: 100px;
             margin-left: 100px;
             border: 2px solid black;
             background-color: aquamarine;
@@ -35,15 +38,22 @@
             background-color: brown;
         }
         #first {
+            position: relative;
             background-color: blue;
         }
         #second {
+            position:absolute;
+            left: 100px;
             background-color: aqua;
         }
         #third {
+            position:absolute;
+            right: -200px;
             background-color: chartreuse;
         }
         #fourth {
+            top: 5px;
+            position: fixed;
             background-color: darkkhaki;
         }
         #tomato1,
@@ -85,6 +95,51 @@
             margin: 30px 0 0 0;
             border: 0;
         }
+        div:first-child {
+            background-color: red;    
+        }
+        div:last-child {
+            background-color: black;
+        }
+        div:nth-child(even) {
+            background-color: blue;
+        }
+        /* div:nth-child(odd) {
+            background-color: chartreuse;
+        } */
+          /* div:nth-child(3n+1) {
+            background-color: chartreuse;
+        } */
+        input{
+            border: 1px solid rgb(203, 12, 12);
+        }
+        input:required {
+            border-color: blue;
+        }
+        input[type="password"] {
+            background-color: rgb(92, 236, 236);
+        }
+        input[type~="text"] {
+            background-color:lightgoldenrodyellow;
+        }
+        button {
+            width: 100px;
+            height: 100px;
+            margin-top: 50px;
+        }
+        button:hover {
+            background-color: beige;
+        }
+        button:active {
+            background-color: cyan;
+        }
+        input:focus {
+            background-color:blanchedalmond ;
+        }
+        a:visited {
+            color: rgb(7, 143, 143);
+        }
+        
     </style>
     <title>Home</title>
 </head>
@@ -115,6 +170,7 @@
         <input required minlength="12" placeholder="비밀번호" type="password">
         <input type="submit" value="생성">
     </form>
+    <button type="button">클릭</button>
 
     <h1>Hello! This is my HTML file! Nice to meet you! </h1>   
     <h2>Can I change something?</h2>
