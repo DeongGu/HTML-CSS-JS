@@ -21,9 +21,20 @@
             background-color: brown;
             color: white;
         }
+        img {
+            border: 5px solid black;
+            border-radius: 50%;
+            /* transform: rotateY(80deg) rotateX(40deg) rotateZ(30deg); */
+            transform: translateX(-200px);
+            transition: transform 3s ease-in-out;
+        }
+        img:hover {
+            transform: rotateZ(90deg);            
+        }
     </style>
 </head>
 <body>
     <a href="#">여기 클릭!</a>
+    <img src="img/icon.jpg" />
 </body>
 </html>
