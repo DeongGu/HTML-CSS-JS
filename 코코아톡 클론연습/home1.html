@@ -5,6 +5,35 @@
     <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="img/icon.jpg">
     <title>연습</title>
     <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes coinFlip {
+            /* from {
+                transform: rotateX(0);
+            }
+            to {
+                transform: rotateX(180deg) translateX(100px);
+            } */
+            0% {
+                transform: rotateY(0);
+            }
+            25% {
+                transform: scale(2);
+            }
+            50% {
+                transform: rotateY(180deg) translateY(0);
+            }
+            75% {
+                transform: scale(3);
+            }
+            100% {
+                transform: rotateY(0) translateY(0);
+            }
+        }
         a {
             color:grey;
             background-color:darkgray;
@@ -24,17 +53,18 @@
         img {
             border: 5px solid black;
             border-radius: 50%;
+            animation: coinFlip 2s ease-in-out infinite;
             /* transform: rotateY(80deg) rotateX(40deg) rotateZ(30deg); */
-            transform: translateX(-200px);
-            transition: transform 3s ease-in-out;
+            /* transform: translateX(-200px);
+            transition: transform 3s ease-in-out; */
         }
-        img:hover {
+        /* img:hover {
             transform: rotateZ(90deg);            
-        }
+        } */
     </style>
 </head>
 <body>
-    <a href="#">여기 클릭!</a>
+    <!-- <a href="#">여기 클릭!</a> -->
     <img src="img/icon.jpg" />
 </body>
 </html>
