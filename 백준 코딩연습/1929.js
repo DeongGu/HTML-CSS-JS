@@ -11,7 +11,7 @@ for(let i=0; i < N; i++){
 }
 
 for(let i = 0; i < arr.length; i++){
-    for(let j = 2; j*j <= i; j++){
+    for(let j = 2; j <= i; j++){
         if(arr[i]%j === 0){
             arr.splice(i,1);
         }
