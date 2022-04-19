@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+body {
+    background-color: rgb(115, 195, 203);
+}
+
+.wrap {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.first {
+    display: flex;
+    justify-content:space-between;
+    width: 100px;
+    animation: turnCircle 1s ease-in-out infinite;
+}
+
+@keyframes turnCircle {
+    from {
+        transform: rotateZ(0);
+    }
+    to {
+        transform: rotateZ(180deg);
+    }
+}
+
+.circle {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.second {
+    display: flex;
+    justify-content:space-between;
+    width: 100px;
+}
+
+.rectangle {
+    background-color: #fff;
+    width: 15px;
+    height: 60px;
+    animation: piano 1s ease-out infinite;
+}
+
+@keyframes piano {
+    0% {
+        transform: scaleY(1);
+      }
+      20% {
+        transform: scaleY(2);
+      }
+      40% {
+        transform: scaleY(1);
+      }
+      60% {
+        transform: scaleY(1);
+      }
+      80% {
+        transform: scaleY(1);
+      }
+      100% {
+        transform: scaleY(1);
+      }
+}
+
+.rectangle:nth-child(2){
+    animation-delay: 0.1s
+}
+.rectangle:nth-child(3){
+    animation-delay: 0.2s;
+}
+
+.rectangle:nth-child(4){
+    animation-delay: 0.3s;
+}
+
+.rectangle:last-child{
+    animation-delay: 0.4s
+}
