@@ -8,6 +8,8 @@ button {
     background-color: #fff;
     border: 2px solid #17191F;
     border-bottom-width: 5px;
+    padding: 0;
+    margin: 0;
 }
 li,ol {
     list-style: none;
@@ -15,7 +17,7 @@ li,ol {
     padding: 0;
 }
 .main {
-    width: 420px;
+    width: 400px;
     padding: 40px 30px;
     border: 5px solid rgb(0,198,173);
     margin: 0 auto;
@@ -67,10 +69,11 @@ li,ol {
 .playlist-main__btn {
     display: flex;
     justify-content:space-between;
+    align-items: center;
 }
 
 .btn__play {
-    width: 190px;
+    width: 220px;
     height: 70px;
     font-size: 20px;
     font-weight: 900;
