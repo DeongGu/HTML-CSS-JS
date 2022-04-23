@@ -4,9 +4,9 @@
 // const n = 5;
 // const lost = [2,4];
 // const reserve = [3];
-const n = 3;
-const lost = [3];
-const reserve = [1];
+// const n = 3;
+// const lost = [3];
+// const reserve = [1];
 
 function solution(n, lost, reserve) {
     const students = {};
