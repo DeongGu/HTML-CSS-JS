@@ -25,7 +25,7 @@ function solution(board, moves) {
     //인접한 중복요소 제거, 반복되어야함
     let count = 0;
 
-    while(count !== moves.length){
+    while(count !== answer){
      result.forEach((x,idx) => {
         if(x === result[idx+1]){
             result.splice(idx,2);
