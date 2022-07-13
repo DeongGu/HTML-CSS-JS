@@ -1,0 +1,24 @@
+<!-- closure
+자식함수에서 부모함수의 변수에 접근할 수 있다. -->
+
+<script>
+  let a = "a";
+
+  function A() {
+    function B() {
+      function C() {
+        let d = "d";
+        console.log(a, b, c, d);
+      }
+      let c = "c";
+      console.log(a, b, c);
+      C();
+    }
+
+    let b = "b";
+    console.log(a, b);
+    B();
+  }
+
+  A();
+</script>
