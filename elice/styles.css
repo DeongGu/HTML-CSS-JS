@@ -1,0 +1,26 @@
+ul {
+  list-style: none;
+}
+
+img {
+  width: 640px;
+  height: 424px;
+}
+
+#dog {
+  width: 1024px;
+  height: 500px;
+  overflow: hidden;
+}
+
+#dog .slides {
+  display: block;
+  width: 8000px;
+  height: 100%;
+}
+
+#dog .slide {
+  float: left;
+  width: 1024px;
+  height: 500px;
+}
