@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is my website">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="img/icon.jpg">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        :root {
+            --main-color: rosybrown;
+        }
+        html {
+            border: 5px solid black;
+            background-color: red;
+        }
+        h1 {
+            font-size: 50px;
+            color: var(--main-color);
+            font-style: italic;
+        }
+        body {
+            margin: 50px 30px;
+            padding: 60px;
+            border: 5px solid black;
+            background-color: aliceblue;
+        }
+        div {
+            /* display: inline; don't have height, width */
+            height: 100px;
+            width: 100px;
+            margin-left: 100px;
+            border: 2px solid black;
+            background-color: aquamarine;
+        }
+        span {
+            background-color: brown;
+        }
+        #first {
+            position: relative;
+            background-color: blue;
+        }
+        #second {
+            position:absolute;
+            left: 100px;
+            background-color: aqua;
+        }
+        #third {
+            position:absolute;
+            right: -200px;
+            background-color: chartreuse;
+        }
+        #fourth {
+            top: 5px;
+            position: fixed;
+            background-color: darkkhaki;
+        }
+        #tomato1,
+        #tomato2,
+        #tomato3,
+        #tomato4 {
+            background-color: tomato;
+        }
+        .tomato {
+            background-color: chartreuse;
+            color: white;
+        }
+        .black {
+            background-color: black;
+            color: white;
+        }
+        .btn {
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .box {
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            margin-top: 30px;
+            border: 1px solid black;
+            margin-left: 0;
+        }
+        .flex_box {
+            display: flex;
+            justify-content:space-between;
+            height: 100vh;
+            align-items: center;
+        }
+        .flex_child {
+            height: 100px;
+            width: 100px;
+            margin: 30px 0 0 0;
+            border: 0;
+        }
+        div:first-child {
+            background-color: red;    
+        }
+        div:last-child {
+            background-color: black;
+        }
+        div:nth-child(even) {
+            background-color: blue;
+        }
+        /* div:nth-child(odd) {
+            background-color: chartreuse;
+        } */
+          /* div:nth-child(3n+1) {
+            background-color: chartreuse;
+        } */
+        input{
+            border: 1px solid rgb(203, 12, 12);
+        }
+        input:required {
+            border-color: blue;
+        }
+        input[type="password"] {
+            background-color: rgb(92, 236, 236);
+        }
+        input[type~="text"] {
+            background-color:lightgoldenrodyellow;
+        }
+        button {
+            width: 100px;
+            height: 100px;
+            margin-top: 50px;
+        }
+        button:hover {
+            background-color: beige;
+        }
+        button:active {
+            background-color: cyan;
+        }
+        input:focus {
+            background-color:blanchedalmond ;
+        }
+        a:visited {
+            color: rgb(7, 143, 143);
+        }
+        
+    </style>
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <main>
+       <span>Hello~</span>
+    </main>
+    <footer>
+        <address>asdfgg77@naver.com</address>
+        <p>&copy;2022 DG</p>
+    </footer>
+
+    <form>
+        <!-- <input type="color"> -->
+        <label for="profile">Profile Photo</label>
+        <input id="profile" type="file" accept=".pdf,.png">
+        <label for="name">Name</label>
+        <input id="name" required placeholder="이름" type="text">
+        <!-- <input required disabled placeholder="성" type="text"> -->
+        <label for="website">website</label>
+        <input id="website" required type="url">
+        <input type="range">
+        <input type="date">
+        <input required placeholder="닉네임" type="text">
+        <input required minlength="12" placeholder="비밀번호" type="password">
+        <input type="submit" value="생성">
+    </form>
+    <button type="button">클릭</button>
+
+    <h1>Hello! This is my HTML file! Nice to meet you! </h1>   
+    <h2>Can I change something?</h2>
+    <h3><a href="https://google.com" target="_blank">Go to google.com</a></h3>
+    <img src="img/icon.jpg" alt="이미지">
+    <p>hello</p>
+    <pre>hello</pre>
+    <code>hello</code>
+    <p>I love <mark>you</mark></p>
+    <p>I love <strong>you</strong></p>
+    <p>I love <sub>you</sub></p>
+    <p>I love <sup>you</sup></p>
+    <p>2<sup>4</sup></p>
+    <h4><p>My name is <abbr title="Shin seong woo">SSW</abbr></p></h4>
+    <!-- <dialog open>hello!</dialog> -->
+
+    <div id="first">
+        <div id="second">
+            <div id="third">
+                <div id="fourth">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <span>hello</span>
+    <address>asdfgg77@naver.com</address>
+    <span>hello</span>
+    <img src="img/icon.jpg" alt="이미지">
+    <span>hello</span>
+    <a href="#">link</a>
+    <p>파일 편집 선택영역 보기 이동 실행 터미널 도움말 코코아톡 클론연습</p>
+
+    <span class="tomato btn">TOMATO</span>
+    <span id="tomato1" class="black btn">TOMATO</span>
+    <span class="tomato btn">TOMATO</span>
+    <span id="tomato2" class="btn">TOMATO</span>
+    <span class="tomato btn">TOMATO</span>
+    <span id="tomato3" class="black btn">TOMATO</span>
+    <span class="tomato btn">TOMATO</span>
+    <span id="tomato4" class="btn">TOMATO</span>
+    <span class="tomato btn">TOMATO</span>
+
+    <!-- <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div> -->
+
+<section class="flex_box">
+    <div class="flex_child"></div>
+    <div class="flex_child"></div>
+    <div class="flex_child"></div>
+    <div class="flex_child"></div>
+    <div class="flex_child"></div>
+</section>    
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+.hidden {
+    display: none;
+}
+
+img {
+    width: 300px;
+}
+
+#contents:hover{
+    cursor: pointer;
+}

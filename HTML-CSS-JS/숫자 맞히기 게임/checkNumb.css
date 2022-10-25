@@ -1,0 +1,49 @@
+#contents {
+  margin: auto;
+  width: 50%;
+  border: 3px solid rgb(71, 99, 223);
+  padding: 10px;
+  text-align: center;
+}
+
+#result {
+    margin: 5%;
+    font-size: 30px;
+    border: 10px solid blue;
+    text-align: center;
+    padding: 10%
+}
+
+#startBtn {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: auto;
+    width: 20%;
+    margin-top: 20px;
+
+}
+
+#resetBtn{
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    font-weight: bold;
+    width: 20%;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#clickCount {
+    text-align: center;
+    font-weight: bold;
+}

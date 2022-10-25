@@ -1,0 +1,91 @@
+.wrapper {
+  margin: 30px;
+}
+
+.title {
+  color: green;
+}
+
+.black_white {
+  background-color: black;
+  color: white;
+}
+
+#internet,
+#browser {
+  border: 1px solid black;
+}
+
+input[type="button"] {
+  border: 1px solid blue;
+}
+
+div > p {
+  border: 1px solid green;
+}
+
+div > p:hover {
+  background-color: green;
+}
+
+.box {
+  background-color: purple;
+  width: 100px;
+  height: 100px;
+}
+
+#box1 {
+  padding: 50px;
+}
+
+#box2 {
+  margin: 0;
+}
+#box3 {
+  border: 2px solid black;
+  padding: 50px;
+}
+
+#ex1 {
+  border: 3px solid black;
+  float: right;
+}
+#ex2 {
+  border: 3px solid red;
+  float: right;
+}
+#ex3 {
+  border: 3px solid blue;
+  float: left;
+}
+#ex4 {
+  border: 3px solid green;
+  clear: both;
+}
+#ex5 {
+  border: 3px solid yellow;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: bisque;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-item {
+  border: 1px solid black;
+}

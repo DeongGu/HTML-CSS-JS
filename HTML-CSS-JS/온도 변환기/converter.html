@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온도 변환기</title>
+    <link rel="stylesheet" href="converter.css">
+</head>
+<body>
+    <div class="container">
+        <h1>섭씨 &hArr; 화씨 온도 변환기</h1>
+        <input type="text" id="bV" onkeyup="result()">
+        <span id="bU">&#8451;</span>
+        <span id="exchange" onclick="exch()">&hArr;</span>
+        <input type="text" id="aV">
+        <span id="aU">&#8457;</span>
+    </div>
+
+    <script src="converter.js"></script>
+</body>
+</html>

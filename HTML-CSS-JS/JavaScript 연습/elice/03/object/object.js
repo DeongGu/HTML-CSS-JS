@@ -1,0 +1,19 @@
+//배달 음식의 어플리케이션의 사용자.
+
+let user = {
+  name: "홍길동",
+  age: 30,
+  email: "test@naver.com",
+  address: "서울 용산",
+  food: ["김치찌개", "제육볶음"],
+
+  payment: function () {
+    console.log("결제가 완료 되었습니다.");
+  },
+
+  deliverystart: function () {
+    console.log("배달이 시작되었습니다.");
+  },
+};
+
+// console.log(user.payment());
